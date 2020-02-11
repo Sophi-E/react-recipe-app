@@ -19,13 +19,14 @@ export default function recipe({ title, calories, image, ingredients }) {
     <div style={recipeStyle}>
       <h1>{title}</h1>
       <ol>
+        <h3>Ingredients</h3>
         {ingredients.map((ingredient, index) => (
           <li style={{ listStyle: 'none' }} key={index}>
             {ingredient.text}
           </li>
         ))}
       </ol>
-      <p>{Math.round(calories)}</p>
+      <h3>Calories: {Math.round(calories)}</h3>
       <img src={image} alt={title} />
     </div>
   );
